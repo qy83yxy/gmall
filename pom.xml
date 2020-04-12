@@ -10,10 +10,22 @@
     <packaging>pom</packaging>
 
     <modules>
-        <!-- 核心模块 -->
-        <module>gmall-core</module>
         <!-- 后台管理者模块 -->
         <module>gmall-admin</module>
+        <!-- 核心模块 -->
+        <module>gmall-core</module>
+        <!-- 逆向生成模块 -->
+        <module>gmall-generator</module>
+        <!-- 订单管理模块 -->
+        <module>gmall-oms</module>
+        <!-- 商品管理模块 -->
+        <module>gmall-pms</module>
+        <!-- 营销管理模块 -->
+        <module>gmall-sms</module>
+        <!-- 用户管理模块 -->
+        <module>gmall-ums</module>
+        <!-- 库存管理模块 -->
+        <module>gmall-wms</module>
     </modules>
 
 </project>

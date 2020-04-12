@@ -23,10 +23,10 @@ import com.atguigu.modules.oss.service.SysOssService;
 import com.atguigu.modules.sys.service.SysConfigService;
 import com.google.gson.Gson;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.annotation.Resource;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.Map;
@@ -39,8 +39,8 @@ import java.util.Map;
 @RestController
 @RequestMapping("sys/oss")
 public class SysOssController {
-  @Autowired private SysOssService sysOssService;
-  @Autowired private SysConfigService sysConfigService;
+  @Resource private SysOssService sysOssService;
+  @Resource private SysConfigService sysConfigService;
 
   private static final String KEY = ConfigConstant.CLOUD_STORAGE_CONFIG_KEY;
 

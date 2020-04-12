@@ -1,7 +1,8 @@
 
 .idea/
 target/
-
+LICENSE
+README.md
 # Compiled class file
 *.class
 
