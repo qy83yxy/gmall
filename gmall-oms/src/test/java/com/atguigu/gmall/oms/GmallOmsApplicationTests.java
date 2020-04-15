@@ -1,4 +1,4 @@
-package com.atguigu.gmall.oms;
+package com.ketai.gmall.oms;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
