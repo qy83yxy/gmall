@@ -26,6 +26,8 @@
         <module>gmall-ums</module>
         <!-- 库存管理模块 -->
         <module>gmall-wms</module>
+        <!-- 网关管理模块 -->
+        <module>gmall-gateway</module>
     </modules>
 
 </project>

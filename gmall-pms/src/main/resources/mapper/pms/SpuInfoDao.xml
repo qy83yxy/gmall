@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.atguigu.gmall.pms.dao.SpuInfoDao">
+<mapper namespace="com.ketai.gmall.pms.dao.SpuInfoDao">
 
-    <!-- 可根据自己的需求，是否要使用 -->
-    <resultMap type="com.ketai.gmall.pms.entity.SpuInfoEntity" id="spuInfoMap">
-        <result property="id" column="id"/>
-        <result property="spuName" column="spu_name"/>
-        <result property="spuDescription" column="spu_description"/>
-        <result property="catalogId" column="catalog_id"/>
-        <result property="brandId" column="brand_id"/>
-        <result property="publishStatus" column="publish_status"/>
-        <result property="createTime" column="create_time"/>
-        <result property="uodateTime" column="uodate_time"/>
-    </resultMap>
-
+    <select id="listSpuById" resultType="com.ketai.gmall.pms.entity.SpuInfoEntity">
+        SELECT
+        id,
+        spu_name,
+        spu_description,
+        catalog_id,
+        brand_id,
+        publish_status,
+        create_time,
+        uodate_time
+        FROM pms_spu_info
+        <where>
+            <if test="key != null and key != ''">
+                AND id = #{key} OR spu_name LIKE CONCAT('%', #{key}, '%')
+            </if>
+            <if test="catId != null and catId != 0">
+                AND catalog_id = #{catId}
+            </if>
+        </where>
+    </select>
 
 </mapper>

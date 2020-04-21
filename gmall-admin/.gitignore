@@ -1,7 +1,8 @@
+
 target/
-gmall-admin.iml
 LICENSE
 README.md
+# gmall-admin.iml
 # Compiled class file
 *.class
 

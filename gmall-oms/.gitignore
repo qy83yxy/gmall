@@ -1,8 +1,7 @@
 HELP.md
 target/
 gmall-oms.iml
-mvnw.cmd
-mvnw
+mvnw*
 .mvn/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**
